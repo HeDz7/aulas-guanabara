@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+</head>
+
+<body>
+    <h1>Inserindo vídeos hospedados localmente.</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+    <!-- Vídeos em ordem de tamanho, do menor KB para o maior, cima para baixo. -->
+    <!-- Tomar cuidado com tamanhos dos vídeos, pois pode gerar um consumo enorme de banda larga e ficar altamente caro. -->
+
+    <video controls width="700" poster="image/24-247075_pixel-art-glock-18-hd-png-download.png" loop autoplay>
+        <source src="media/glock.webm" type="video/webm">
+        <source src="media/glock.mp4" type="video/mp4">
+        <source src="media/glock.m4v" type="video/m4v">
+        <source src="media/glock.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+
+    <!-- Desse jeito vc hospeda um vídeo e o custo de hospedagem/banda larga não é do seu cliente, e sim do source do vídeo -->
+
+    <h1>Inserindo vídeo do YouTube.</h1>
+    <iframe width="700" height="500" src="https://www.youtube.com/embed/EQgDNgEl9qs" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <h1>Inserindo vídeo do Vimeo.</h1>
+    <iframe src="https://player.vimeo.com/video/326092804?h=7c23f7a29c&color=ff0179" width="700" height="394"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+
+</html>
