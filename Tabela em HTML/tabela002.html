@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /* Para funcionar o cabeçalho fixo a tabela tem que estar com posicionamento relativo*/
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+            /* Com a tabela em posição relativa, colocamos o cabeçalho (th) com posição sticky (grudado) e para tirar a margenzinha que fica colocamos top negativo (-1px)*/
+        }
+
+        .numero {
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightseagreen;
+            color: white;
+        }
+        /* NTH-CHILD()= 2n: seria de 2 em 2 linhas
+                       odd: numeros ímpares
+                      even: números pares 
+        */
+        tbody > tr:nth-child(odd) {
+            background-color: lightcyan;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    <!-- 
+        ANATOMIA PARA AS TABELAS GRANDES
+        
+        CAPTION (Título da tabela)
+        THEAD (Cabeçalho da Tabela)
+            TR, TD, TH 
+        TBODY 
+            TR, TD, TH
+        TFOOT
+            TR, TD, TH
+
+            TH = Título, padrão do HTML é centralizado e em negrito.   
+
+
+        SCOPE > Diz pros resultados de busca de um jeito mais eficiente onde esta os resultados de seu TH,
+        COL: Resultado na sua própria coluna
+        ROW: Resultado na sua própria linha
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.873.064</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.433.957</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>0000</strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+    <div class="paragrafos">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit optio error dolore odit eius reprehenderit exercitationem porro velit iure aut quod aliquam hic tenetur adipisci doloribus quo, aperiam qui ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, ex illum? Nobis eveniet exercitationem molestiae impedit quos! Ipsa commodi earum, perspiciatis saepe aliquam iure impedit porro, amet, odit nam eius! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam aliquid laborum, explicabo voluptates ipsam illo, praesentium excepturi vitae quibusdam ea nesciunt, in iusto dolore ad voluptatibus provident officiis. Nihil, sequi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolores perspiciatis sapiente id cumque soluta, quis, vitae nulla ipsam adipisci, doloribus nam quos non incidunt? Nihil deserunt sit inventore distinctio! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quod, id quae nemo tempore nihil veritatis aut! Dolores, architecto at deserunt omnis cumque incidunt cupiditate, perspiciatis accusantium, animi similique consectetur.</p>
+    </div>
+</body>
+</html>
