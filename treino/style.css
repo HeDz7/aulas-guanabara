@@ -14,16 +14,47 @@ body {
 
 header {
     background-color: black;
+    width: 100%;
+    height: 15vh;
+}
+/* -------- NAV1 --------- */
+.nav1 {
+    font-size: .7em;
+    border-bottom: 1px solid rgba(95, 95, 95, 0.63);
+}
+
+
+.nav1 nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav1 li {
+    color: #959595;
+    padding: 10px;
+}
+
+/* -------- NAV2 ---------*/
+.logo img{
+    margin-top: -30px;
+    margin-left: 30px;
+    background-color: black;
+}
+
+.nav2 {
     width: 100vw;
-    height: 10vh
+    height: 10vh;
 }
 
-/* -------- NAV1 ---------*/
-nav {
+
+/* -------- NAV3 ---------*/
+.nav3 {
     padding: 20px;
+    display: inline-block;
 }
 
-header ul {
+.nav3 ul {
     display: flex;
     color: white;
     list-style: none;
@@ -31,14 +62,14 @@ header ul {
     font-weight: bolder;
 }
 
-header ul li {
+.nav3 li {
     padding: 5px;
     border-radius: 10px;
     text-align: center;
     width: 200px;
 }
 
-header ul li:hover {
+.nav3 li:hover {
     transition: background 1s;
     background-color: red;
     color: black;
@@ -59,6 +90,10 @@ header ul li:hover {
     color: lightsalmon;
     background-color: black;
     cursor: pointer;
+}
+
+p:hover {
+    text-decoration: underline;
 }
 
 .produtos #acc {
