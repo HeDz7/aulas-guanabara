@@ -1,0 +1,13 @@
+1970 - guerra fria - começou a internet
+agencia de pesquisa tecnológica DARPA - Wisen Howard
+arpanet - dados compartilhados para que não fossem perdidos por bombardeios (rede gerenciada pelo governo/ universidade MIT), ultimo nome: internet
+
+1993 - Genebra - TBL (Tim Berners-Lee) - surgiu HTML/HTTP/WWW
+
+primeiro navegador: MOSAIC - Marc Andreessen
+
+Marc and Jim Clark criaram em 94 o Netscape - navegador mais famoso da internet.
+
+ECMAscript - linguagem padronizada de JS
+
+NODEjs - maquina que opera JS fora do navegor 
