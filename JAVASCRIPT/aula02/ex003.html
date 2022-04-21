@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu primeiro programa.</title>
+  <style>
+    body {
+      background-color: lightblue;
+      color: white;
+      font: normal 20pt Arial;
+    }
+  </style>
+</head>
+<body>
+    <h1>Hello World.</h1>
+    <p>Já me livrei da maldição!!</p>
+    <script> /*
+      var n1 = window.prompt('Digite um número: ') // String 
+      var n2 = window.prompt('Digite outro número: ') // String
+      var s = n1 + n2 // s - soma - concatenação ou adição
+      window.alert('O resultado é ' + s) // o Resultado disso vai ser a concatenação entre os numeros, ou seja: 3 + 7 = 37
+      */
+
+      var n1 = Number.parseInt(window.prompt('Digite um número: ')) // Number 
+      var n2 = Number.parseInt(window.prompt('Digite outro número: ')) // Number
+      var s = n1 + n2 // s - soma - concatenação ou adição
+      window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) 
+
+      // ou podemos usar apenas Number() e o JS decide se é inteiro ou real.
+    </script>
+</body>
+</html>
