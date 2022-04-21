@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+
+  <script>
+    /*
+    var nome = window.prompt('Digite seu nome aqui')
+    document.write(`Olá ${nome}, seu nome tem ${nome.length} letras. <br>`)
+    document.write(`Seu nome fica assim em maiúsculo: ${nome.toLocaleUpperCase()} <br>`)
+    document.write(`Em minúsculo fica assim: ${nome.toLocaleLowerCase()}`)
+    */
+
+    var n1 = Number(window.prompt('Quanto você tem:'))
+    var n2 = Number(window.prompt('Dívida:'))
+    var res = n1 - n2 
+    window.alert(`O resultado de ${n1} e ${n2} é: ${res}`)
+    document.write(`${res.toLocaleString ('pt-br', {style: 'currency', currency: 'BRL'})}`)
+  </script>
+</body>
+</html>
