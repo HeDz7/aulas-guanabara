@@ -1,0 +1,76 @@
+RELACIONAIS
+> < >= <= == !=
+= recebe
+== igual
+!= não igual
+
+Exemplos
+
+preço >= 200.50 / o preço é maior ou igual 200.50?
+idade < 18 / idade é menor que 18?
+curso == 'JavaScript' / curso é igual JavaScript?
+n1 != n2 / n1 é diferente de n2?
+
+Identidade:
+5 == 5 true
+5 == '5' true (number e string)
+5 === '5' false (=== identico)
+
+
+LÓGICOS
+
+!  &&  ||
+! = negação
+&& = e (lógico)
+|| = ou (disjunção)
+
+!true = não verdadeiro = falso
+!false = não falso = verdadeiro
+
+true && true = true
+true && false = false
+false && true = false
+false && false = false
+
+true || true = true
+true || false = true
+false || true = true
+false || false = false
+
+Exemplos
+
+idade >= 15 && idade <= 17 / a idade esta entre 15 e 17?
+
+estado == 'RJ' || estado == 'SP' / o estado é RJ ou SP?
+
+salário > 1500 && sexo != 'M' / o salário é acima de 1500 e não é homem? 
+
+
+Precedência
+ |	Aritméticos () ** /
+ |	Relacionais > < >= <= == 
+ |	Lógicos ! não 
+ | 		&& e
+ |		|| ou
+ \/
+
+
+TERNÁRIO
+? :
+
+ternário pq junta 3 operandos
+ teste ? true : false
+
+Exemplo
+
+	média >= 7.0 ? 'Aprovado' : 'Reprovado'
+
+
+
+var x = 8
+
+var res = x % 2 == 0 ? 5 : 9
+
+var idade = 19
+
+var r = idade >= ? 'Maior' : 'Menor'
