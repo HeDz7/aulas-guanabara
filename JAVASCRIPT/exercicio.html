@@ -5,10 +5,102 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>    
+    body { 
+      background: black;
+      color: white;
+    }
+
+    .motion1{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #fff;
+      position: absolute;
+      border-radius: 50%;
+      animation: circleAnimation 2s linear infinite;
+    }
+
+    .circle:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #31c857;
+      box-shadow: 0 0 20px #04fc43, 0 0 68px #04fc43;
+    }
+
+    @keyframes circleAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .motion2 {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      border: 1px solid white;
+      position: absolute;
+      
+    }
+
+    .square:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      animation: squareAnimation 2s ease-out infinite ;
+      background-color: rgb(170, 0, 255);
+      box-shadow: 0 0 20px #fc04f8, 0 0 68px #e704fc;
+    }
+
+    @keyframes squareAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
 </head>
 <body>
   <h1>Hello World</h1>
-
+    <div class="motion1">
+      <div class="circle"></div>
+    </div>
+    <div class="motion2">
+      <div class="square"></div>
+    </div>
   <script>
     /*
     var nome = window.prompt('Digite seu nome aqui')
@@ -17,11 +109,13 @@
     document.write(`Em minúsculo fica assim: ${nome.toLocaleLowerCase()}`)
     */
 
+    /*
     var n1 = Number(window.prompt('Quanto você tem:'))
     var n2 = Number(window.prompt('Dívida:'))
     var res = n1 - n2 
     window.alert(`O resultado de ${n1} e ${n2} é: ${res}`)
-    document.write(`${res.toLocaleString ('pt-br', {style: 'currency', currency: 'BRL'})}`)
+    document.write(`${res.toLocaleString ('pt-br', {style: 'currency', currency: 'BRL'})}`) 
+    */
   </script>
 </body>
 </html>
