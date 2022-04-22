@@ -7,9 +7,20 @@
   <title>Somando Números</title>
 
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      background: linear-gradient(90deg,red, blue);
+      background: linear-gradient(to bottom,red, blue);
       font: 2em bold, Arial;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     h1, #res {
@@ -23,6 +34,11 @@
 
     input {
       padding: 10px 10px;
+      margin: 20px 0;
+    }
+
+    #text1, #text2 {
+      width: 20%;
     }
 
     #button {
@@ -54,7 +70,7 @@
       var n1 = Number(txt1.value)
       var n2 = Number(txt2.value)
       var s = n1 + n2
-      res.innerText = `A soma entre ${n1} e ${n2} é ${s}.`
+      res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}.`
     }
   </script>
 </body>
