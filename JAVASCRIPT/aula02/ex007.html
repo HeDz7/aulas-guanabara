@@ -35,6 +35,7 @@
     input {
       padding: 10px 10px;
       margin: 20px 0;
+      font-size: 1em;
     }
 
     #text1, #text2 {
@@ -70,7 +71,7 @@
       var n1 = Number(txt1.value)
       var n2 = Number(txt2.value)
       var s = n1 + n2
-      res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}.`
+      res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}.`
     }
   </script>
 </body>
