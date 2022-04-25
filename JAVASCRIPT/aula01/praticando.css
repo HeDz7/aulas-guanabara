@@ -85,3 +85,16 @@ input {
   cursor: pointer;
   color: aliceblue;
 }
+
+@media screen and (max-width: 900px){
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    display: none;
+  }
+}
