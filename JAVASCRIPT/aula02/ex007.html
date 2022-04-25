@@ -65,11 +65,11 @@
 
   <script>
     function somar() {
-      var txt1 = window.document.getElementById('text1')
-      var txt2 = window.document.querySelector('input#text2')
+      var t1 = window.document.getElementById('text1')
+      var t2 = window.document.querySelector('input#text2')
       var res = window.document.getElementById('res')
-      var n1 = Number(txt1.value)
-      var n2 = Number(txt2.value)
+      var n1 = Number(t1.value)
+      var n2 = Number(t2.value)
       var s = n1 + n2
       res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}.`
     }
