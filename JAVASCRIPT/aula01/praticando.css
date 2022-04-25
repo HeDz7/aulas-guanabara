@@ -97,4 +97,9 @@ input {
   main {
     display: none;
   }
+
+  .calculator {
+    width: 90%;
+    height: 30rem;
+  }
 }
