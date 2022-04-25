@@ -14,12 +14,64 @@
   </style>
 </head>
 <body>
+  <main>
+    <h1>Praticando JavaScript</h1>
+    <div id="ps">
+      <p class="dz">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis incidunt distinctio ducimus repellat dicta ipsam quos. Nostrum culpa, cupiditate nam adipisci sunt animi quae molestias accusantium veritatis veniam quidem!</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nobis, aliquam amet, optio aspernatur totam, delectus at eaque nam atque ex fugiat qui omnis velit temporibus non laudantium nesciunt reprehenderit!</p>
+    </div>
+  </main>
+
     <h1>Hello World.</h1>
     <p>Já me livrei da maldição!!</p>
+
+
     <script>
       window.alert('Minha primeira mensagem.')
       //window.confirm('Está gostando de JS?')
       //window.prompt('Qual')
+
+      /*
+    var nome = window.prompt('Digite seu nome aqui:')
+    var sobrenome = window.prompt('Agora digite seu sobrenome:')
+
+    var n1 = prompt('Qual seu salário: ')
+    var n2 = prompt('Qual sua dívida: ')
+    var res = n1 - n2
+
+    document.write(`Seu nome é ${nome.toLocaleUpperCase()} ${sobrenome.toLocaleUpperCase()} <br>`)
+    document.write(`Seu total líquido restante é de ${res.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`) 
+    */
+
+    var p2 = document.getElementsByTagName('p')[1]
+    var p1 = document.getElementsByClassName('dz')[0]
+    var cards = document.getElementById('ps')
+    p2.style.color = 'blue'
+    p2.style.font = 'bolder 1.4em monospace'
+
+    p1.style.background = 'red'
+    p1.style.font = 'bolder 1.4em monospace'
+    p1.style.color = 'white'
+
+    var title = document.getElementsByTagName('h1')[0]
+
+    title.addEventListener('click', clicar)
+    p1.addEventListener('mouseout', sair)
+    p1.addEventListener('mousemove', mover)
+    
+    function clicar() {
+      title.innerText = 'Salve carai'
+    }
+
+    function sair() {
+      title.innerText = 'Praticando Javascript'
+      p1.style.background = 'red'
+    }
+
+    function mover() {
+      p1.style.background = 'darkgrey'
+    }
+
     </script>
 </body>
 </html>

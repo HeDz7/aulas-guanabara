@@ -9,17 +9,9 @@
   <title>Praticando JS</title>
 </head>
 <body>
-  <main>
-    <h1>Praticando JavaScript</h1>
-    <div id="ps">
-      <p class="dz">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis incidunt distinctio ducimus repellat dicta ipsam quos. Nostrum culpa, cupiditate nam adipisci sunt animi quae molestias accusantium veritatis veniam quidem!</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nobis, aliquam amet, optio aspernatur totam, delectus at eaque nam atque ex fugiat qui omnis velit temporibus non laudantium nesciunt reprehenderit!</p>
-    </div>
-  </main>
-
   <div class="calculator">
     <input type="number" name="text1" class="text1"> 
-    <span class="plus">+</span>
+    <p>+</p>
     <input type="number" name="text2" class="text2">
 
     <input type="button" id="button" value="Somar" onclick="somar()">
@@ -29,47 +21,7 @@
   </div>
 
 
-  <script> /*
-    var nome = window.prompt('Digite seu nome aqui:')
-    var sobrenome = window.prompt('Agora digite seu sobrenome:')
-
-    var n1 = prompt('Qual seu salário: ')
-    var n2 = prompt('Qual sua dívida: ')
-    var res = n1 - n2
-
-    document.write(`Seu nome é ${nome.toLocaleUpperCase()} ${sobrenome.toLocaleUpperCase()} <br>`)
-    document.write(`Seu total líquido restante é de ${res.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`) 
-    */
-
-    var p2 = document.getElementsByTagName('p')[1]
-    var p1 = document.getElementsByClassName('dz')[0]
-    var cards = document.getElementById('ps')
-    p2.style.color = 'blue'
-    p2.style.font = 'bolder 1.4em monospace'
-
-    p1.style.background = 'red'
-    p1.style.font = 'bolder 1.4em monospace'
-    p1.style.color = 'white'
-
-    var title = document.getElementsByTagName('h1')[0]
-
-    title.addEventListener('click', clicar)
-    p1.addEventListener('mouseout', sair)
-    p1.addEventListener('mousemove', mover)
-    
-    function clicar() {
-      title.innerText = 'Salve carai'
-    }
-
-    function sair() {
-      title.innerText = 'Praticando Javascript'
-      p1.style.background = 'red'
-    }
-
-    function mover() {
-      p1.style.background = 'darkgrey'
-    }
-
+  <script> 
     function somar() {
       var text1 = document.getElementsByClassName('text1')[0]
       var text2 = document.getElementsByClassName('text2')[0]
