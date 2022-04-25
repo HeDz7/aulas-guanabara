@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu primeiro programa.</title>
-  <style>
-    body {
-      background-color: lightblue;
-      color: white;
-      font: normal 20pt Arial;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Praticando JavaScript</h1>
-    <div id="ps">
-      <p class="dz">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis incidunt distinctio ducimus repellat dicta ipsam quos. Nostrum culpa, cupiditate nam adipisci sunt animi quae molestias accusantium veritatis veniam quidem!</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nobis, aliquam amet, optio aspernatur totam, delectus at eaque nam atque ex fugiat qui omnis velit temporibus non laudantium nesciunt reprehenderit!</p>
-    </div>
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu primeiro programa.</title>
+    <style>
+      body {
+        background-color: lightblue;
+        color: white;
+        font: normal 20pt Arial;
+      }
+
+      h1,p {
+        width: 400px;
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin-right: 10px;
+        color: white;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.629);
+        box-shadow: inset 2px 2px 10px rgba(255, 255, 255, 0.451);
+        background-color: aquamarine;
+      }
+
+      h1:hover {
+        box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.385);
+        cursor: pointer;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.845);
+        background-color: rgb(64, 255, 191);
+      }
+
+      p {
+        background-color: rgb(255, 245, 233);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Praticando JavaScript</h1>
+      <div id="ps">
+        <p class="dz">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+          perferendis incidunt distinctio ducimus repellat dicta ipsam quos.
+          Nostrum culpa, cupiditate nam adipisci sunt animi quae molestias
+          accusantium veritatis veniam quidem!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium
+          nobis, aliquam amet, optio aspernatur totam, delectus at eaque nam
+          atque ex fugiat qui omnis velit temporibus non laudantium nesciunt
+          reprehenderit!
+        </p>
+      </div>
+    </main>
 
     <h1>Hello World.</h1>
     <p>Já me livrei da maldição!!</p>
-
 
     <script>
       window.alert('Minha primeira mensagem.')
@@ -43,35 +80,34 @@
     document.write(`Seu total líquido restante é de ${res.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`) 
     */
 
-    var p2 = document.getElementsByTagName('p')[1]
-    var p1 = document.getElementsByClassName('dz')[0]
-    var cards = document.getElementById('ps')
-    p2.style.color = 'blue'
-    p2.style.font = 'bolder 1.4em monospace'
+      var p2 = document.getElementsByTagName('p')[1]
+      var p1 = document.getElementsByClassName('dz')[0]
+      var cards = document.getElementById('ps')
+      p2.style.color = 'blue'
+      p2.style.font = 'bolder 1.4em monospace'
 
-    p1.style.background = 'red'
-    p1.style.font = 'bolder 1.4em monospace'
-    p1.style.color = 'white'
-
-    var title = document.getElementsByTagName('h1')[0]
-
-    title.addEventListener('click', clicar)
-    p1.addEventListener('mouseout', sair)
-    p1.addEventListener('mousemove', mover)
-    
-    function clicar() {
-      title.innerText = 'Salve carai'
-    }
-
-    function sair() {
-      title.innerText = 'Praticando Javascript'
       p1.style.background = 'red'
-    }
+      p1.style.font = 'bolder 1.4em monospace'
+      p1.style.color = 'white'
 
-    function mover() {
-      p1.style.background = 'darkgrey'
-    }
+      var title = document.getElementsByTagName('h1')[0]
 
+      title.addEventListener('click', clicar)
+      p1.addEventListener('mouseout', sair)
+      p1.addEventListener('mousemove', mover)
+
+      function clicar() {
+        title.innerText = 'Salve carai'
+      }
+
+      function sair() {
+        title.innerText = 'Praticando Javascript'
+        p1.style.background = 'red'
+      }
+
+      function mover() {
+        p1.style.background = 'darkgrey'
+      }
     </script>
-</body>
+  </body>
 </html>
