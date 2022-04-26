@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="praticando.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="praticando.css" />
 
-  <title>Praticando JS</title>
-</head>
-<body>
-  <div class="calculator">
-    <input type="number" name="text1" class="text1"> 
-    <p>+</p>
-    <input type="number" name="text2" class="text2">
+    <title>Praticando JS</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>CALCULATOR</h1>
+      <input type="number" name="text1" class="text1" />
+      <p>+</p>
+      <input type="number" name="text2" class="text2" />
 
-    <input type="button" id="button" value="Somar" onclick="somar()">
-    <!--ONLICK = ON + FUNÇÃO DOM, ONMOVEENTER, ONMOVEUP...-->
+      <input type="button" id="button" value="Somar" onclick="somar()" />
 
-    <div class="result"></div>
-  </div>
+      <div class="result"></div>
+    </div>
 
+    <script>
+      function somar() {
+        var text1 = document.getElementsByClassName('text1')[0]
+        var text2 = document.getElementsByClassName('text2')[0]
+        var result = document.querySelector('div.result')
+        var n1 = Number(text1.value)
+        var n2 = Number(text2.value)
+        var s = n1 + n2
+        var s1 = s / 4.86
+        var s2 = s / 5.23
 
-  <script> 
-    function somar() {
-      var text1 = document.getElementsByClassName('text1')[0]
-      var text2 = document.getElementsByClassName('text2')[0]
-      var result = document.querySelector('div.result')
+        result.innerText = `Em REAIS: ${s.toLocaleString('pt-br', {
+          style: 'currency',
+          currency: 'BRL'
+        })}
+      Em DÓLAR: ${s1.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'USD'
+      })}
+      Em EURO: ${s2.toLocaleString('pt-br', {
+        style: 'currency',
+        currency: 'EUR'
+      })}`
+      }
 
-      var n1 = Number(text1.value)
-      var n2 = Number(text2.value)
-      var s = n1 + n2
-      var s1 = s / 4.86 
-      var s2 = s / 5.23
+      var toque = document.getElementById('button')
+      toque.addEventListener('mousemove', interagir)
+      toque.addEventListener('mousedown', apertar)
+      toque.addEventListener('mouseup', voltar)
+      toque.addEventListener('mouseout', sair)
 
-      result.innerText = `Em REAIS: ${s.toLocaleString('pt-br', {style:'currency', currency:'BRL'})}
-      Em DÓLAR: ${s1.toLocaleString('pt-br', {style:'currency', currency:'USD'})}
-      Em EURO: ${s2.toLocaleString('pt-br', {style:'currency', currency:'EUR'})}`
-    }
-  </script>
-</body>
+      function interagir() {
+        toque.style.boxShadow = 'inset 2px 2px 4px rgba(0, 0, 0, 0.6), inset -1px -1px 4px rgb(255, 255, 255)'
+      }
+
+      function apertar() {
+        toque.style.boxShadow = 'inset -2px -2px 4px rgba(0, 0, 0, 0.6), inset 1px 1px 4px rgb(255, 255, 255)'
+      }
+
+      function voltar() {
+        toque.style.boxShadow = 'inset 2px 2px 4px rgba(0, 0, 0, 0.6), inset -1px -1px 4px rgb(255, 255, 255)'
+      }
+
+      function sair() {
+        toque.style.boxShadow = 'none'
+      }
+    </script>
+  </body>
 </html>

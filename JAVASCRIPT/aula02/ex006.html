@@ -15,7 +15,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
   </style>
 
@@ -33,9 +32,10 @@
             mouseup = click up do mouse na box
             click = todo evento e click do mous na box */
     var a = window.document.getElementById('area')
-    a.addEventListener('click', clicar)
+    a.addEventListener('mousedown', clicar)
     a.addEventListener('mouseenter', entrar)
     a.addEventListener('mouseout', sair)
+    a.addEventListener('mouseup', volta)
 
     function clicar() {
       a.innerText = 'Clicou!'
@@ -47,9 +47,15 @@
     }
 
     function sair() {
-      a.innerText = 'Saiu!'
+      a.innerText = 'Interaja...'
       a.style.background = 'lightblue'
     }
+
+    function volta() {
+      a.style.background = 'lightblue'
+      a.innerText = 'Interaja...'
+    }
+
   </script>
 </body>
 </html>
