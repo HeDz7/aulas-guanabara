@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>NACIONALIDADE</h1>
+    Digite aqui seu país de residência atual: <input type="text" name="text" id="text"> <input type="button" value="Verificar" onclick="clicar()">
+
+    <div class="res"></div>
+
+    <script>
+      function clicar(){
+      var txt = document.getElementById('text')
+      var res = document.getElementsByClassName('res')[0]
+      var nationality = (txt.value)
+      
+        res.innerHTML = `<p>Você está no país: ${nationality}</p>`
+
+        if ( nationality == 'Brasil') {
+          res.innerHTML += `Vocé é <strong>BRASILEIRO</strong>`
+        } else {
+          res.innerHTML += `Vocé é <strong>ESTRANGEIRO</strong>`
+        }
+
+      }
+    </script>
+</body>
+</html>
