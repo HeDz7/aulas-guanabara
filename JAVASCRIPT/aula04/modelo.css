@@ -35,5 +35,6 @@ section {
 footer {
   text-align: center;
   font-style: italic;
-  color: white;
+  color: transparent;
+  text-shadow: 0 0 1px black;
 }
