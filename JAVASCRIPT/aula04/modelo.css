@@ -29,12 +29,12 @@ section {
   width: 30rem;
   border-radius: 10px;
   margin: auto;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.481);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.289);
 }
 
 footer {
   text-align: center;
   font-style: italic;
-  color: transparent;
-  text-shadow: 0 0 1px black;
+  color: white;
+  text-shadow: 1 1 7px black;
 }
