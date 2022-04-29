@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treinando JS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      text-align: center;
+    }
+
+    h1 {
+      text-shadow: 0 0 3px white;
+    }
+
+    .checkbox {
+      background: white;
+      width: 200px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font: bold 1em Arial;
+    }
+
+    .picture {
+      display: inline-block;
+      margin-top: -100px;
+    }
+  </style>
+
+</head>
+<body>
+    <h1>Mobile</h1>
+    <h2></h2>
+
+    <div>
+      <img src="" alt="" id="img">
+    </div>
+
+    <div class="checkbox" onclick="select()">
+      <input type="radio" class="radsex" name="radsex" checked>
+      <label for="">Masculino</label>
+      <input type="radio" class="radsex" name="radsex">
+      <label for="">Feminino</label>
+    </div>
+
+    <img src="" class="picture" alt="">
+    <script src="treinando.js"></script>
+</body>
+</html>
