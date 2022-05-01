@@ -14,7 +14,7 @@ function tabuada() {
       let item = document.createElement('option')
       item.innerHTML = `${n} x ${c} = ${n*c}`
 
-      item.value = `tab${c}`
+      item.value = `tab${c}` //info para PHP
 
       tab.appendChild(item) 
       c++
