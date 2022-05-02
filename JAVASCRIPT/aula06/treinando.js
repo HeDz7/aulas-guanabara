@@ -45,7 +45,7 @@ function select() {
 
   if (masc.checked) {
     pic.src = 'homem.png'
-  } else {
+  } else if (femi.checked) {
     pic.src = 'mulher.png'
   }
 }
