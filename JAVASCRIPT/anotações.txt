@@ -84,3 +84,11 @@ Selecionando:
  por MARCA : getElementsByTagNam()
  por ID:
  por NOME: 
+
+Para usar backgroundImage = "url('nome.extensão')"
+Para option = função[0]selected
+Para radio = função[0]checked
+
+criar img pelo JS = var img = document.creatElement('img')
+img.setAttribute('id', 'foto') e depois se usa 
+img.setAttribute('src', 'nome.extensão')
