@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios</title>
+</head>
+<body>
+  <h1>Verificador de Idade</h1>
+
+  <div class="gender">
+    <label for="ano">ANO DE NASCIMENTO:</label>
+    <input type="number" name="ano" id="ano">
+    <br>
+    <label for="sexo">SEXO:</label>
+    <input type="radio" name="radsex" id="man">
+    <label for="man">Homem</label>
+    <input type="radio" name="radsex" id="wom">
+    <label for="wom">Mulher</label>
+
+    <input type="button" value="Gerar" onclick="verificar()">
+
+    <div class="res"></div>
+    <img src="" id="img" alt="">
+  </div>
+
+
+  <script>
+    function verificar() {
+      let year = Number(ano.value)
+
+      let man = document.getElementById('man')
+      let wom = document.getElementById('wom')
+
+      if (ano.value.length == 0) {
+        window.alert('Digite um valor na caixa!')
+      } else if (man.checked) {
+        if (year >= 1900 && year <= 1950) {
+          img.src = 'idoso.png'
+        } else if (year <= 1990) {
+          img.src = 'homem.png'
+        } else if (year <= 2010) {
+          img.src = 'jovemM.png'
+        } else {
+          img.src = 'garoto.png'
+        }
+      } else if (wom.checked) {
+        if (year >= 1900 && year <= 1950) {
+          img.src = 'idosa.png'
+        } else if (year <= 1990) {
+          img.src = 'mulher.png'
+        } else if (year <= 2010) {
+          img.src = 'jovemF.png'
+        } else {
+          img.src = 'garota.png'
+        }
+      }
+    }
+
+
+  </script>
+</body>
+</html>
