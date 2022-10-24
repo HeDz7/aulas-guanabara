@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: darkslateblue;
+  height: 100vh;
+}
+body header input, body header button {
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  background-color: antiquewhite;
+  transition: 0.2s ease-in-out;
+}
+body header input:hover, body header button:hover {
+  background-color: #fdf6ee;
+}
+body header button {
+  cursor: pointer;
+}
+body header .text-input {
+  font-size: 1.125rem;
+  color: white;
+  padding: 1rem 0;
+}
+body main {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+body main .main-squad {
+  width: 16rem;
+  height: 16rem;
+}
+body main .main-squad .principal {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  font-size: 5rem;
+}
+body main .sub-squads {
+  display: flex;
+  gap: 2rem;
+}
+body main .sub-squads .squad {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+}
+body main .sub-squads .squad:nth-child(1) {
+  background-color: red;
+}
+body main .sub-squads .squad:nth-child(2) {
+  background-color: yellow;
+}
+body main .sub-squads .squad:nth-child(3) {
+  background-color: blue;
+}/*# sourceMappingURL=style.css.map */
