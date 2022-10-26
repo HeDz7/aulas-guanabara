@@ -16,12 +16,12 @@ squads.forEach(squad => {
 })
 
 // print input value
-let input = document.querySelector('#text')
+// let input = document.querySelector('#text')
 
-let textPrint = document.querySelector('.text-input')
+// let textPrint = document.querySelector('.text-input')
 
-let btn = document.querySelector('#btn-print')
+// let btn = document.querySelector('#btn-print')
 
-btn.addEventListener('click', () => {
-  textPrint.innerHTML += input.value
-})
+// btn.addEventListener('click', () => {
+//   textPrint.innerHTML += input.value
+// })
